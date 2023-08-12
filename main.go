@@ -1,0 +1,5 @@
+package kscache
+
+func main() {
+	
+}

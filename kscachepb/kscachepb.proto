@@ -1,0 +1,16 @@
+syntax = "proto3";
+option go_package="./;KsCache";//必须要加，命令都丢在system32里面去了
+package geecachepb;
+
+message Request {
+  string group = 1;
+  string key = 2;
+}
+
+message Response {
+  bytes value = 1;
+}
+
+service GroupCache {
+  rpc Get(Request) returns (Response);
+}
